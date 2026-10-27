@@ -1,0 +1,327 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #24332d;
+    background-color: #faf9f6;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* MENU */
+header {
+    background-color: #faf9f6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+    max-width: 1200px;
+    min-height: 76px;
+    margin: auto;
+    padding: 15px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: #24332d;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #c28b50;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #24332d;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c28b50;
+}
+
+/* BANNER */
+.banner {
+    min-height: 570px;
+    padding: 80px 24px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 31, 26, 0.78),
+            rgba(15, 31, 26, 0.12)
+        ),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=90")
+        center 55% / cover no-repeat;
+}
+
+.banner-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+}
+
+.subtitle {
+    color: #c28b50;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.banner h1 {
+    max-width: 650px;
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+.banner-content > p:not(.subtitle) {
+    max-width: 540px;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+/* BOTÕES */
+.button {
+    display: inline-block;
+    background-color: #c28b50;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #946333;
+    transform: translateY(-3px);
+}
+
+/* SEÇÕES */
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 24px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2,
+.meetus h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #68746e;
+}
+
+/* CARTÕES DE DESTINOS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 24px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.card-content p {
+    color: #68746e;
+    margin-bottom: 18px;
+}
+
+.text-link {
+    color: #a36e37;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.text-link:hover {
+    color: #68421f;
+}
+
+/* SOBRE NÓS */
+.meetus {
+    max-width: none;
+    padding: 80px max(24px, calc((100% - 1152px) / 2));
+    background-color: #e9eee7;
+}
+
+.meetus-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.meetus-content > p {
+    color: #53635a;
+    font-size: 17px;
+}
+
+/* CONSELHOS */
+.advice {
+    text-align: center;
+}
+
+.tips {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.tip {
+    padding: 28px;
+    border: 1px solid #e5e2da;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.tip-number {
+    display: inline-block;
+    color: #c28b50;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.tip h3 {
+    margin-bottom: 12px;
+}
+
+.tip p {
+    color: #68746e;
+}
+
+/* RODAPÉ */
+.footer {
+    background-color: #24332d;
+    color: white;
+    padding: 45px 24px;
+    text-align: center;
+}
+
+.footer .logo {
+    color: white;
+}
+
+.footer > p {
+    margin-top: 10px;
+    color: #d5ded7;
+}
+
+.footer .copyright {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #b7c1ba;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 800px) {
+    .cards,
+    .tips {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .meetus-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 560px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .banner {
+        min-height: 500px;
+        padding: 60px 24px;
+    }
+
+    .cards,
+    .tips {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 20px;
+    }
+
+    .meetus {
+        padding: 65px 20px;
+    }
+}
